@@ -27,8 +27,21 @@ var promptSettings = function () {
   if(permittedCharacters.length < 1 ) {
     alert("You must select at least one Criteria");
     promptSettings ();
-    
   }
+}
+var pwlength = function () {
+  let length = prompt ("Input a length of your password between 1-15 characters");
+  // add conditional
+
+
+}
+var generatePassword = function(permittedCharacters,passwordlength) {
+  let password = "";
+  for (let i=0; i< passwordlength; i++) {
+    password+= permittedCharacters [Math.floor(Math.random()*permittedCharacters.length)];
+  }
+  return password;
+
 
 }
 
