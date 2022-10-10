@@ -40,7 +40,7 @@ var pwlength = function () {
   }
 
 }
-pwlength()
+var passwordlength = pwlength()
   let password = "";
   for (let i=0; i< passwordlength; i++) {
     password+= permittedCharacters [Math.floor(Math.random()*permittedCharacters.length)];
@@ -48,8 +48,8 @@ pwlength()
   return password;
 
 }
-// Write password to the #password input
 
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
