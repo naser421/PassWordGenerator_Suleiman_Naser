@@ -2,7 +2,7 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var generatePassword = function(passwordlength) {
+var generatePassword = function() {
 var lowerCaseletters = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
 ];
@@ -36,35 +36,31 @@ var pwlength = function () {
   }
   else {
     alert("please try again with a number from the valid range");
-    return pwlength
+    return pwlength()
   }
 
 }
-var generatePassword = function(permittedCharacters,passwordlength) {
+pwlength()
   let password = "";
   for (let i=0; i< passwordlength; i++) {
     password+= permittedCharacters [Math.floor(Math.random()*permittedCharacters.length)];
   }
   return password;
 
-
-}
 }
 // Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-  var rungenerator = function () {
-    promptSettings();
-    pwlength();
-    generatePassword();
-    writePassword();
+
   }
 
-}
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
