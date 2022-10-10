@@ -15,7 +15,7 @@ var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(",")"];
 
 let permittedCharacters = [];
 
-// stuff
+// criteria selectors
 
   alert('Click OK or Cancel to select the criteria you want or do not want in your password. You need to select at least one');
   if(confirm('Lower Case Letter')) {permittedCharacters.push(lowerCaseletters[0],lowerCaseletters[1],lowerCaseletters[2],lowerCaseletters[3],lowerCaseletters[4],lowerCaseletters[5],lowerCaseletters[6],lowerCaseletters[7], lowerCaseletters[8],lowerCaseletters[9],lowerCaseletters[10],lowerCaseletters[11],lowerCaseletters[12],lowerCaseletters[13],lowerCaseletters[14],lowerCaseletters[15], lowerCaseletters[16],lowerCaseletters[17],lowerCaseletters[18],lowerCaseletters[19],lowerCaseletters[20],lowerCaseletters[21],lowerCaseletters[22],lowerCaseletters[23],lowerCaseletters[24], lowerCaseletters[25]);}
@@ -29,9 +29,9 @@ let permittedCharacters = [];
   }
 
 var pwlength = function () {
-  let length = prompt ("Input a length of your password between 1-15 characters");
-  // add conditional
-  if (!isNaN(length) && length>=1 && length<=15) {
+  let length = prompt ("Input a length of your password between 8-128 characters");
+  // conditional for password length
+  if (!isNaN(length) && length>=8 && length<=128) {
     return length;
   }
   else {
