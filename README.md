@@ -9,4 +9,4 @@ You will also be given the chance to choose your desired length of the password 
 
 ![](images/password_screenshot.png)
 
-You can access the password generator at : 
+You can access the password generator at : https://naser421.github.io/PassWordGenerator_Suleiman_Naser/
